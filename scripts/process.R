@@ -114,8 +114,8 @@ system(sprintf("gdal_calc.py -A %s -B %s --type=Byte --co COMPRESS=LZW --outfile
 
 
 ####################  PROCESS -  CREATE A PSEUDO COLOR TABLE
-cols <- col2rgb(c("darkgreen","grey"))
-pct  <- data.frame(cbind(c(1:2),
+cols <- col2rgb(sample(colors(),nrow(codes)))
+pct  <- data.frame(cbind(codes$class_num,
                         cols[1,],
                         cols[2,],
                         cols[3,]))
