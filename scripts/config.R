@@ -21,7 +21,7 @@ setwd(data_dir)
 source(paste0(scriptdir,"packages.R"))
 
 
-################### OUTPUTS 
+################### ALL VARIABLES
 mosaic_mask    <- paste0(mosaic_dir,"mask.tif")
 
 segment_file   <- paste0(segs_dir,"segments.shp")
