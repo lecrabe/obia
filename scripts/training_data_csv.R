@@ -16,6 +16,8 @@ band_names   <- names(mosaic)
 dbf <- spdf@data
 dbf[,c("tmp_id",band_names)] <- extract(mosaic,spdf,df=T)
 
+spdf@data <- dbf 
+writeOGR(spdf,train_shp_file,train_basename,"ESRI Shapefile",overwrite_layer = T)
 train_sel <- dbf[!is.na(dbf[,band_names[1]]),]
 
 table(train_sel[,code_field])
