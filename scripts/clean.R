@@ -6,3 +6,5 @@ rm(img_segs_spec)
 rm(res_all)
 rm(resultsWithId)
 gc()
+
+system(sprintf(paste0("rm -f -r ",data_dir,"/","core.*")))
